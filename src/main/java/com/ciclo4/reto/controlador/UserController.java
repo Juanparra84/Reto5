@@ -90,4 +90,14 @@ private UserService userService;
     public boolean emailExists(@PathVariable("email") String email) {
         return userService.emailExists(email);
     }
+
+    /**
+     *
+     * @param monthBirthtDay
+     * @return
+     */
+    @GetMapping("/birthday/{month}")
+    public List<User> birthtDayList(@PathVariable("month") String monthBirthtDay) {
+        return userService.birthtDayList(monthBirthtDay);
+    }
 }
